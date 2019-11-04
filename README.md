@@ -1,4 +1,4 @@
-# Rainy Mood
+# rainymood-cli
 
 Listen to Rainy Mood in your terminal.
 
@@ -6,13 +6,9 @@ Listen to Rainy Mood in your terminal.
 
 - NodeJS
 
-## Installation
+## Usage
 
-`npm install -g rainymood`
-
-## How to Use
-
-`rainymood`
+`npx rainymood`
 
 ## Options
 
