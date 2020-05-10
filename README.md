@@ -1,4 +1,4 @@
-# rainymood-cli
+# rainymood
 
 Listen to Rainy Mood in your terminal.
 
