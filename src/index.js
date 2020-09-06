@@ -2,23 +2,25 @@
 'use strict';
 
 const meow = require('meow');
-
 const rainyMood = require('./rainymood');
 
-const cli = meow(`
+const { flags } = meow(
+  `
   Usage
     $ rainymood
 
   Options
     --timeout, -t   Set a timeout (in minutes) to turn off rain.
     --version       Display current version of the application.
-`, {
-  flags: {
-    timeout: {
-      type: 'number',
-      alias: 't'
+  `,
+  {
+    flags: {
+      timeout: {
+        type: 'number',
+        alias: 't'
+      }
     }
   }
-});
+);
 
-rainyMood(cli.flags);
+rainyMood(flags);
