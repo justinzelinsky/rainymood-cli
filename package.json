@@ -11,6 +11,10 @@
     "rainy mood",
     "cli"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinzelinsky/rainymood-cli.git"
+  },
   "author": "Justin Zelinsky",
   "license": "MIT",
   "dependencies": {
