@@ -1,26 +1,24 @@
 #!/usr/bin/env node
 'use strict';
 
-const meow = require('meow');
+const minimist = require('minimist');
 const rainyMood = require('./rainymood');
+const packageJson = require('../package.json');
 
-const { flags } = meow(
-  `
-  Usage
-    $ rainymood
+const flags = minimist(process.argv.slice(2));
 
-  Options
-    --timeout, -t   Set a timeout (in minutes) to turn off rain.
-    --version       Display current version of the application.
-  `,
-  {
-    flags: {
-      timeout: {
-        type: 'number',
-        alias: 't'
-      }
-    }
-  }
-);
+if (flags.help) {
+  console.log(`
+    Usage
+      $ rainymood
 
-rainyMood(flags);
+    Options
+      --timeout, -t   Set a timeout (in minutes) to turn off rain.
+      --version       Display current version of the application.
+  `);
+} else if(flags.version || flags.v) {
+  console.log(packageJson.version);
+} else {
+  const { timeout } = flags;
+  rainyMood(timeout);
+}

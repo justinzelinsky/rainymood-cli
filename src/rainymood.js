@@ -4,7 +4,7 @@ const playSound = require('play-sound');
 const player = playSound();
 const rainyMoodAudio = path.join(__dirname, 'assets/RainyMood.m4a');
 
-function rainyMood({ timeout }) {
+function rainyMood(timeout = 0) {
   console.log(
     '\x1b[36m%s\x1b[0m',
     "It's a nice, rainy day! Enjoy. \uD83C\uDF27"

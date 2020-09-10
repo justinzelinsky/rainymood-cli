@@ -18,7 +18,7 @@
   "author": "Justin Zelinsky",
   "license": "MIT",
   "dependencies": {
-    "meow": "^7.0.0",
+    "minimist": "^1.2.5",
     "play-sound": "^1.1.3"
   }
 }
