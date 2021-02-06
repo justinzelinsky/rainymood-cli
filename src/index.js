@@ -17,7 +17,7 @@ if (flags.help) {
       --timeout, -t   Set a timeout (in minutes) to turn off rain.
       --version       Display current version of the application.
   `);
-} else if(flags.version || flags.v) {
+} else if (flags.version || flags.v) {
   console.log(packageJson.version);
 } else {
   const player = playSound();
@@ -28,14 +28,14 @@ if (flags.help) {
     "It's a nice, rainy day! Enjoy. \uD83C\uDF27"
   );
 
-  const audio = player.play(rainyMoodAudio, function(err) {
+  const audio = player.play(rainyMoodAudio, function (err) {
     if (err) {
       throw err;
     }
   });
 
   if (flags.timeout) {
-    setTimeout(function() {
+    setTimeout(function () {
       console.log('\x1b[31m%s\x1b[0m', "Sun's out! \uD83C\uDF24");
       audio.kill();
     }, timeout * 60 * 1000);
