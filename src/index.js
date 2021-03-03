@@ -41,3 +41,7 @@ if (flags.help) {
     }, timeout * 60 * 1000);
   }
 }
+
+process.on('SIGINT', function() {
+  console.log('\n\x1b[31m%s\x1b[0m', "Sun's out! \uD83C\uDF24");
+});
